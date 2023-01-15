@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Our own little animal farm."""
+# hi
 
 import sys
 
@@ -11,7 +12,7 @@ from animals import lion
 import animal
 import farm
 
-def build_animal(kind):
+def create_animal(kind):
     """Create an animal class."""
     if kind == 'cat':
         return cat.Cat()
@@ -26,7 +27,7 @@ def build_animal(kind):
 def main(animals):
     animal_farm = farm.Farm()
     for animal_kind in animals:
-        animal_farm.add_animal(build_animal(animal_kind))
+        animal_farm.add_animal(create_animal(animal_kind))
     animal_farm.print_contents()
 
 if __name__ == '__main__':
